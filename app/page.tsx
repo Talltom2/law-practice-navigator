@@ -1,65 +1,107 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <main className="min-h-screen bg-slate-950 text-white">
+      <section className="mx-auto flex min-h-screen max-w-6xl flex-col justify-center px-6 py-20">
+        <div className="max-w-3xl">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-blue-400">
+            Law Firm Navigator
+          </p>
+
+          <h1 className="mb-6 text-5xl font-bold tracking-tight md:text-7xl">
+            Strategic guidance for small law firms.
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
+
+          <p className="mb-8 text-xl leading-8 text-slate-300">
+            Law Firm Navigator helps solo attorneys and small law firms make
+            better business decisions with AI-powered assessments, growth
+            planning, competitive insight, and practical recommendations.
+          </p>
+
+          <div className="flex flex-col gap-4 sm:flex-row">
             <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="#early-access"
+              className="rounded-lg bg-blue-500 px-6 py-3 text-center font-semibold text-white hover:bg-blue-400"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
+              Request Early Access
+            </a>
             <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="#features"
+              className="rounded-lg border border-slate-600 px-6 py-3 text-center font-semibold text-slate-200 hover:bg-slate-800"
             >
-              Learning
-            </a>{" "}
-            center.
+              See How It Works
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" className="bg-white px-6 py-20 text-slate-950">
+        <div className="mx-auto max-w-6xl">
+          <h2 className="mb-12 text-4xl font-bold">
+            Built for firms that need clarity.
+          </h2>
+
+          <div className="grid gap-8 md:grid-cols-3">
+            <div className="rounded-xl border border-slate-200 p-6 shadow-sm">
+              <h3 className="mb-3 text-xl font-semibold">Firm Assessment</h3>
+              <p className="text-slate-600">
+                Evaluate your current position across marketing, operations,
+                client acquisition, financial health, and competitive strength.
+              </p>
+            </div>
+
+            <div className="rounded-xl border border-slate-200 p-6 shadow-sm">
+              <h3 className="mb-3 text-xl font-semibold">
+                AI Recommendations
+              </h3>
+              <p className="text-slate-600">
+                Receive practical next-step guidance designed specifically for
+                solo attorneys and small law firms.
+              </p>
+            </div>
+
+            <div className="rounded-xl border border-slate-200 p-6 shadow-sm">
+              <h3 className="mb-3 text-xl font-semibold">
+                Growth Dashboard
+              </h3>
+              <p className="text-slate-600">
+                Track priorities, opportunities, risks, and firm growth
+                initiatives from one simple dashboard.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-slate-100 px-6 py-20 text-slate-950">
+        <div className="mx-auto max-w-4xl text-center">
+          <h2 className="mb-6 text-4xl font-bold">
+            Stop guessing. Start navigating.
+          </h2>
+          <p className="mb-8 text-lg text-slate-600">
+            Most small firms are overloaded with client work and under-equipped
+            for strategic planning. Law Firm Navigator gives firm owners a
+            structured way to identify what matters next.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+      </section>
+
+      <section id="early-access" className="bg-slate-950 px-6 py-20">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="mb-6 text-4xl font-bold">
+            Early access is coming soon.
+          </h2>
+          <p className="mb-8 text-lg text-slate-300">
+            We are building the first version now. Early users will help shape
+            the assessment, dashboard, and recommendation engine.
+          </p>
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:info@lawfirmnavigator.com"
+            className="inline-block rounded-lg bg-blue-500 px-8 py-4 font-semibold text-white hover:bg-blue-400"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
+            Contact Us
           </a>
         </div>
-      </main>
-    </div>
+      </section>
+    </main>
   );
 }
